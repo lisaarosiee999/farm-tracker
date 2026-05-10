@@ -1,0 +1,75 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Java: Compile",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\compile-java.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Database: Create Tables",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\init-database.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Tomcat: Start",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\start-tomcat.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Tomcat: Deploy Framtracker",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\deploy-to-tomcat.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Tomcat: Stop",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\stop-tomcat.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Open App in Browser",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "Start-Process 'http://localhost:8081/Framtracker/index.jsp'"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

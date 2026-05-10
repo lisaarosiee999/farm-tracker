@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>Farm Expense and Profitability Tracker</display-name>
+
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>com.farmtracker.servlet.DashboardServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddFarmServlet</servlet-name>
+        <servlet-class>com.farmtracker.servlet.AddFarmServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddFarmServlet</servlet-name>
+        <url-pattern>/add-farm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddCropCycleServlet</servlet-name>
+        <servlet-class>com.farmtracker.servlet.AddCropCycleServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddCropCycleServlet</servlet-name>
+        <url-pattern>/add-crop-cycle</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddExpenseServlet</servlet-name>
+        <servlet-class>com.farmtracker.servlet.AddExpenseServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddExpenseServlet</servlet-name>
+        <url-pattern>/add-expense</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteRecordServlet</servlet-name>
+        <servlet-class>com.farmtracker.servlet.DeleteRecordServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteRecordServlet</servlet-name>
+        <url-pattern>/delete-record</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReportServlet</servlet-name>
+        <servlet-class>com.farmtracker.servlet.ReportServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ReportServlet</servlet-name>
+        <url-pattern>/reports</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
