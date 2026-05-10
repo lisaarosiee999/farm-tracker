@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Java: Build WAR",
+      "type": "shell",
+      "command": "mvn",
+      "args": ["package"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Database: Create Tables",
+      "type": "shell",
+      "command": "bash",
+      "args": ["${workspaceFolder}/scripts/init-database.sh"],
+      "problemMatcher": []
+    },
+    {
+      "label": "App: Run Jetty",
+      "type": "shell",
+      "command": "mvn",
+      "args": ["jetty:run"],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Tomcat: Deploy Framtracker",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\deploy-to-tomcat.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Open App in Browser",
+      "type": "shell",
+      "command": "open",
+      "args": ["http://localhost:8081/Framtracker/index.jsp"],
+      "problemMatcher": []
+    }
+  ]
+}
